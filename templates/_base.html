@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <title>
+            {% block page_title %}
+                Little Green River : Karen Rustad's homepage
+            {% endblock %}
+        </title>
+        
+        {% block js %}
+            <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Alegreya:400italic,400,700' rel='stylesheet' type='text/css'>
+
+            {% block extra_js %}
+            {% endblock %}
+        {% endblock %}
+        
+        {% block css %}
+        <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen" charset="utf-8">
+
+            {% block extra_css %}
+            {% endblock %}
+        {% endblock %}
+
+    </head>
+
+    <body>
+        <div id="container">    
+            <div id="header">
+                <div id="title-wrap">
+                    <span id="intro">The home page of </span><a href="/index.html"><h1><span id="name">Karen Rustad,</span> <span id="epithet">pixel-stained technopeasant</h1></a>
+                </div>
+
+                <div id="sitenav">
+                    <ul>
+                        <li class="{% block home_selected %}{% endblock %}">
+                            <a href="/">Home</a>
+                        </li>    
+                        <li class="{% block about_me_selected %}{% endblock %}">
+                            <a href="/about_me.html">About Me</a>
+                        </li>
+                        <li class="{% block portfolio_selected %}{% endblock %}">
+                            <a href="/portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="http://links.mako.cc/bookmarks/aldeka/">Links</a>
+                        </li>
+                        <li>
+                            <a href="http://littlegreenriver.com/weblog/">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="site">
+
+            {% block content %}
+
+                {% block content_header %}
+                <div id="content-header">
+                    <h1>{% block title %}{% endblock %}</h1>
+                </div>
+                {% endblock %}
+
+
+                {% block content_body %}
+                <div id="post-content">
+                    {% block article %}
+                    {% endblock %}    
+                </div>
+                {% endblock %}
+
+            {% endblock %}
+            </div>
+            
+            <div id='footer'>CC-BY 2012 Karen Rustad</div>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,200 @@
+{% extends "_base.html" %}
+
+{% block title %}Portfolio{% endblock %}
+{% block portfolio_selected %}selected{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/portfolio.css" type="text/css" media="screen" charset="utf-8">
+{% endblock extra_css %}
+
+{% block extra_js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/static/js/portfolio.js"></script>
+{% endblock extra_js %}
+
+{% block article %} 
+<img src="/static/img/me.png" style="margin-right: 20px;" class="left"/>Hi. I'm Karen Rustad. I do things. Some things that I do:
+<ul>
+<li><strong>Free and open source software communities and culture</strong></li>
+<li><strong>Web programming</strong> -- primarily in Python, thus far mostly in Django</li>
+<li><strong>Front-end user experience design</strong> -- personas, prototypes, stylesheets, and scripts</li>
+<li><strong>Drawing</strong> -- cartoons, illustrations, logos, personality</li>
+<li><strong>Making tech communities friendlier</strong> -- both general and women-centric outreach</li>
+</ul>
+
+<h2><a name="looking-for"></a>What I want</h2>
+
+After I graduate in May, I'm looking for a job doing front-end web development, preferably in Python. Ideally, I'd still get to spend some of my time on UI/UX design and/or product management; for all that I know how to code, I'm never going to stop caring about how the product looks and whether it actually helps anyone. 
+
+<h2><a name="portfolio"></a>Stuff I've done</h2>
+<div id="portfolio-nav">
+<ul>
+<a href="#" class="active" name="openhatch"><li id="nav-openhatch">OpenHatch</li></a>
+<a href="#" name="pulse"><li id="nav-pulse">Pulse</li></a>
+<a href="#" name="cfa-brigade"><li id="nav-cfa">CfA Brigade</li></a>
+<a href="#" name="iolab"><li id="nav-iolab">IOLab</li></a>
+<a href="#" name="foss-outreach"><li id="nav-foss">FOSS Outreach Research</li></a>
+<a href="#" name="gsd"><li id="nav-gsd">Getting Sh*t Done</li></a>
+</ul>
+</div>
+
+<div id="portfolio-content">
+<div id="openhatch" class="story">
+    <h2>OpenHatch: the startup</h2>
+    <img src="/prerendered/oh-logo.png" height="200" class="left"/>
+    <p><a href="http://openhatch.org">OpenHatch</a> started out as a <a href="https://openhatch.org/blog/2009/press-release/">web startup</a> founded in May 2009 by three alumni of the free culture and free software movements as part of startup incubator Shotput Ventures' inaugural class. OpenHatch built online tools to demonstrate and broaden open source developers’ experience and expertise in order to make the open source community better connected, more productive, and ultimately better rewarded.</p>
+
+    <p>I joined OpenHatch in late June 2009, about a month and a half after the company was founded. My initial duties were mainly research and writing related: learning about our target audience, researching competitors, preparing for meetings with industry leaders, and writing OpenHatch’s business plan. Over time, I became responsible for the site's graphics, design, and user experience as well. </p>
+    
+    <img src="/prerendered/oh-sufjan.png" class="center"/>
+
+    <p>I designed a ‘mascot’ of sorts for OpenHatch: Sufjan the baby penguin. Among other places, Sufjan appears as the default profile photo for new OpenHatch members.</p>
+    
+        <img src="/prerendered/oh-people-cartoon.png" class="center" width="650"/>
+    <img src="/prerendered/oh-projects-cartoon.png" class="center" width="650"/>
+    <img src="/prerendered/oh-missions-cartoon.png" class="center" width="650"/>
+    
+    <p>All of the header cartoons and illustrations on OpenHatch's website are my work. They have become the face of OpenHatch and remain the most uniformly-liked, remarked-on part of OpenHatch’s user experience.</p>
+    
+    <p>I <a href="http://docs.google.com/Doc?docid=0AXNqpfwA4_bBZGR0dzkyemZfODV4cnQ0dmdx&hl=en">developed personas</a>, mocked up UI elements for user feedback, and worked on the site's design. Through many iterations, we tried to make the various tools on the OpenHatch website clear, responsive, and fun to use.</p>
+    
+    <p>Given OpenHatch’s target audience, we needed to create a design that would appeal to open source software developers. Since most open source software project websites are designed by the coders who contribute to the project, not designers, they tend to be highly utilitarian (or, less charitably, ugly). I and the other designer on the team, Raffi Krut-Landau, worried whether this was just because many software developers didn’t have the skills, time, or inclination to do better, or if they were actually attracted to logos and websites that were spartan or garish.</p>
+    <img src="/prerendered/oh-screenshot-old.png"/>
+    
+    <p>Our design breakthrough came after I talked to my father, a software engineer and contributor to the Linux kernel. The initial site design was inspired by his and other engineers’ typical work wardrobe: minimalist; white, beige, and pale blue stripes; and cartoony site graphics—reminiscent of Dilbert—for a little color. It was a thrill when one of our users described the design to us as “clean, simple, friendly, and joyful”—a synthesis of my and Raffi’s personalities.</p>
+    
+    <img src="/prerendered/oh-importer-ship.png" class="center" width="650"/>
+    
+    <p>One early feature whose design we iterated on extensively was the automatic experience importer, which took the usernames a user regularly used in their open source software work and collected all the FOSS contributions associated with those usernames. We needed to develop an interface which would make it easy to quickly approve or unapprove the contributions the importer found (since most would not need any editing) while still allowing users to make edits if necessary. We also needed to make it clear what parts of an older contribution had been updated if new material was found and also offer an interface through which users could add contributions by hand if the importer failed to find them automatically. And, ideally, we had to do all this in a way that would not consume an excessive amount of vertical space. Through many enthusiastic debates, scribbles on whiteboards and scratch paper, <a href="/prerendered/oh-importer-screenshot2.png">Photoshop</a> <a href="/prerendered/oh-importer-screenshot3.png">mockups</a>, and user feedback, we eventually developed an <a href="/prerendered/oh-importerinterface.png">interface</a> that would accomplish our goals.</p>
+    
+    <p>I also was key in creating and prioritizing the team's Agile-style user stories and arranging them into achievable, coherent sprints as we raced to get enough features done by Demo Day.</p>
+
+    <p>At the end of the summer, I outlined, prepared the <a href="http://www.slideshare.net/mllerustad/openhatch-demo-day-slides">slide deck</a> for, and delivered part of <a href="http://www.vimeo.com/7041822">OpenHatch's pitch at Shotput Ventures' Demo Day</a> event for over 200 investors, entrepreneurs, and journalists.</p>
+    
+    <img src="/prerendered/oh-squidhearttomato.png" class="center"/>
+    
+    <p>Though we decided not to implement them in OpenHatch, I wrote a <a href="http://www.littlegreenriver.com/wp-content/uploads/OpenHatchGame.pdf">white paper</a> and <a href="http://openhatch.org/blog/2009/game-mechanics-0/">series</a> of <a href="http://openhatch.org/blog/2009/game-mechanics-1/">blog</a> <a href="http://openhatch.org/blog/2009/dr-mcgonigal-or-how-i-learned-to-stop-worrying-and-love-gay-mechanics-part-two/">posts</a> on applied game mechanics in web applications.</p>
+    
+    <h2>OpenHatch: the non-profit</h2>
+    
+    <img src="/prerendered/oh-screenshot-less-old.png" class="center"/>
+
+    <p>After I left OpenHatch, the startup morphed into a more traditional open source software project. I continued to contribute by volunteering with UI and graphic design and release planning and began making <a href="https://github.com/openhatch/">code contributions</a> in Python and Django as well, such as OpenHatch's data dump sanitizing scripts and the <a href="https://openhatch.org/blog/2010/introducing-the-buildhelper/">"buildhelper" feature</a> for project pages.</p>
+    
+    <img src="/prerendered/oh-donate.png" height="200" class="center"/>
+
+    <p>Now that OpenHatch has made the transition to being a non-profit organization, I serve on OpenHatch's board of directors. I help apply for grants, represent OpenHatch at conferences, write <a href="https://openhatch.org/blog/2012/1137-people-have-learned-free-software-skills-with-the-help-of-openhatchs-training-missions/">blog posts</a>, volunteer for OpenHatch-affiliated outreach events, connect with potential collaborators, and define the strategic trajectory for the organization.</p>
+    
+    <img src="/prerendered/oh-screenshot-new.png" class="center"/>
+    
+    <p>I still contribute code, art, patch review, and release planning work; I have been central to the <a href="http://gentle-robot-6466.herokuapp.com/">upcoming site re-design</a> and <a href="https://openhatch.org/blog/2012/openhatch-t-shirts-are-coming/">OpenHatch t-shirt printing</a>.</p>
+</div>
+    
+<div id="pulse" class="story">
+    <h2>Pulse</h2>
+    <img src="/prerendered/pulse-final-phone.png" width="200" class="left" /><p>Pulse, a classroom feedback mobile application, was my group final project for my UI Design and Development class in spring 2011.</p>
+    <p>Pulse was a simple mobile-based application for large lecture courses that allowed students to submit their current emotion and monitor the sentiments of other students around them during class in real time. Pulse was meant to help solve chronic problems in large lecture courses, including lecture formats not designed to be interrupted with questions, students feeling afraid to ask questions in front of a large group when they're confused, students not knowing how their classmates around them are feeling, and the typical lack of quantitative course evaluations that allow for mid-course corrections.</p>
+    <p>To develop this application, over the course of the semester, my four-person group followed a formal user experience design process from stakeholder analysis to initial experimental tests of a working prototype.</p>
+    <img src="/prerendered/pulse-physical-1.jpg" width="200" class="left"/><img src="/prerendered/pulse-physical-2.jpg" class="left" width="200"/><img src="/prerendered/pulse-physical-3.jpg" class="left" width="200"/>
+    <div class="clearer"></div>
+    <p>We performed contextual inquiry on users and stakeholders with interviews of students and professors and participant observation of classes.</p>
+    <img src="/prerendered/pulse-sequence.jpg" height="300" class="center"/>
+    <img src="/prerendered/pulse-culture-diagram.jpg" class="center" height="300"/>
+    <img src="/prerendered/pulse-flowmodel-whiteboard.jpg" class="left" width="320"/><img src="/prerendered/pulse-flowmodel.png" class="left" width="320"/><div class="clearer"></div>
+    <p>From that data, we created various culture, sequence, and flow model diagrams of classroom processes and power dynamics.</p>
+    <img src="/prerendered/pulse-personas-students.png" width="650" class="center"/>
+    <img src="/prerendered/pulse-personas-profs.png" height="300" class="center"/>
+    <p>Finally, we created five personas--three students (Tessa Schmitt, Justin Brough, and Hye-Seong Park) and two professors (Dr. Erik Olufsen and Dr. Alvin Crumplebottom, Sr.). </p>
+    <p>In the beginning, we saw our app as creating a forum for dialogue between students and professors and thought it would be useful to both groups. However, based on our interviews and other responses, we found that many professors didn't think they wanted or needed such feedback, and even those who did noted that there were no institutional incentives for them to use our system. Thus, we pivoted to focus on the needs of students, without any assumptions of professorial engagement.</p>
+    <img src="/prerendered/pulse-lo-fi.jpg" width="300" class="left"/><img src="/prerendered/pulse-lofi-2.jpg" width="300" class="left"/><div class="clearer"></div>
+    <img src="/prerendered/pulse-paper-1.jpg" width="210" class="left"/><img src="/prerendered/pulse-paper-2.jpg" width="210" class="left"/><img src="/prerendered/pulse-paper-3.jpg" width="210" class="left"/><div class="clearer"></div>
+    <p>We then iterated on paper and digital (Balsamiq) prototypes, performing both in-person user "think-alouds" and heuristic-based evaluations to find UX bugs and make improvements.</p>
+    <img src="/prerendered/pulse-balsamiq-1.jpg" width="210" class="left"/><img src="/prerendered/pulse-balsamiq-2.jpg" width="210" class="left"/><img src="/prerendered/pulse-balsamiq-3.jpg" width="210" class="left"/><div class="clearer"></div>
+    <p>These tests prompted us to switch from a complicated series of line graphs to a simpler bar chart for tracking emotion, offer only a pre-set selection of emotions instead of allowing user-submitted ones, and to simplify further by removing the distinction between questions and comments.</p>
+    <img src="/prerendered/emotes-happy.png" class="left" width="100"/><img src="/prerendered/emotes-curious.png" class="left" width="100"/><img src="/prerendered/emotes-bored.png" class="left" width="100"/><img src="/prerendered/emotes-confused.png" class="left" width="100"/><img src="/prerendered/emotes-annoyed.png" class="left" width="100"/><img src="/prerendered/emotes-neutral.png" class="left" width="100"/><div class="clearer"></div>
+    <p>At this point, I also created our set of custom emotion icons for use in our later prototypes.</p>
+    <img src="/prerendered/pulse-android-2.png" class="left" width="210"/><img src="/prerendered/pulse-android-1.png"  width="210" class="left"/><img src="/prerendered/pulse-android-3.png" class="left" width="210"/><div class="clearer"></div>
+    <p>My teammate Alex Chung was then able to create a working Android-based prototype.</p>
+    <img src="/prerendered/pulse-poster.jpg" class="left" width="320"/><img src="/prerendered/pulse-photo.jpg" class="left" width="320"/><div class="clearer"></div>
+    <p>Finally, we tested the prototype qualitatively and quantitatively with students. We presented our experimental results and <a href="/prerendered/pulse-finalreport.pdf">final report</a> to our class and showed our application poster at the UC Berkeley computer science department's May 2011 UI Design Tradeshow.</p>
+</div>
+    
+<div id="foss-outreach" class="story">
+<h3>"Suck It Up, Princess": Diversity and Outreach in FOSS Communities</h3>
+    <p>For my Social and Organizational Issues of Information class in spring 2011, I wrote a research paper called "'Suck It Up, Princess': Diversity and Outreach in FOSS Communities" (<a href="http://littlegreenriver.com/stuffs/Outreach-Diversity-FOSS.html">html</a>)(<a href="http://littlegreenriver.com/stuffs/Outreach-Diversity-FOSS.pdf">pdf</a>). The paper examined current processes of how new contributors get involved in free software, how subtle biases in those "recruitment" mechanisms might account for the gender gap in free software contribution, and possible ways that free software projects could address those issues in becoming friendlier to newcomers.</p>
+    <p>The paper made the rounds through various free software and free culture circles. In August 2011, I published a condensed version as an article for Ubuntu Women's column in <a href="http://fullcirclemagazine.org/issue-52/">Full Circle Magazine</a>.</p>
+<h3>Community Management as a User Experience Problem</h3>
+    <a href="http://www.youtube.com/watch?v=FV1lD0uRzeA"><img src="/prerendered/comm-mgmt-talk.png" style="border: 2pt solid black;"/></a>
+    <p>In November 2011, after sending my paper around Wikimedia's listserv, Wikimedia Foundation's executive director Sue Gardner invited me to give a tech talk. The talk, <a href="http://www.youtube.com/watch?v=FV1lD0uRzeA">"Community Management as a User Experience Problem"</a>, covered similar themes as the paper using the lens of user experience design to uncover problems and roadblocks that new contributors typically face.</p>
+<h3>Improving Documentation With "Beginner's Mind"</h3>
+<a href="https://www.youtube.com/watch?v=euh9ZQi339o"><img src="/prerendered/pycon-talk.png" style="border: 2pt solid black;"/></a>
+    <p>In March 2012, I gave <a href="https://www.youtube.com/watch?v=euh9ZQi339o">another related talk</a> at <a href="https://us.pycon.org/2012/schedule/presentation/422/">PyCon</a> about getting into the mindset of newcomers when writing documentation, playtesting your open source software project's docs, and generally the importance of good installation and tutorial docs in growing your project's community.</p>
+</div>
+    
+<div id="cfa-brigade" class="story">
+<h2>Code for America Brigade</h2>
+<h3>Summer 2011: Geek Corps</h3>
+<p>During my Google Summer of Code-sponsored internship at <a href="http://codeforamerica.org">Code for America</a> in the summer of 2011, I designed and helped build a prototype Ruby on Rails application then called <a href="http://geekcorps.heroku.com/">"Geek Corps"</a>.</p>
+<img src="/prerendered/brigade-people-page-2.png" width="320" class="left"/> 
+<img src="/prerendered/brigade-app-page-1.jpg" width="320" class="left" />
+<img src="/prerendered/brigade-deploymentguide1.jpg" width="320" class="left"/>
+<img src="/prerendered/brigade-milestones-1.jpg" width="320" class="left" />
+<div class="clearer"></div>
+<p>The application was a documentation repository and collaboration platform to help volunteers hack on and redeploy Code for America's civic apps in non-CfA client cities.</p>
+<img src="/prerendered/brigade-geekcorps.png" width="320" class="left" />
+<img src="/prerendered/brigade-geekcorps2.png" width="320" class="left" />
+<div class="clearer"></div>
+<p>Geek Corps was the initial attempt to solve the problem of how Code for America could expand the number of people involved in modernizing civic technology without making their fellowship program unmanageably large. Before this application, when interested potential volunteers contacted Code for America and asked how they could help, Code for America did not have a place to point them to--there were no resources for wrangling volunteers. With only thirty fellowship slots for over five hundred applicants for the 2012 fellowship class, there was far more interest in improving city technology and civic hacking than Code for America's tiny staff could handle. By creating a clear entry point and resources for new volunteers, <a href="http://codeforamerica.org/2011/09/01/karens-cfa-sumer-geek-corps/">Geek Corps</a> was meant to be a whole new channel for Code for America to pursue its mission of making local governments more accountable, transparent, efficient, and agile.</p>
+<h3>Fall 2011: CfA Everywhere</h3>
+<p>After the summer ended, I continued work on the project in my fall 2011 Information Systems and Service Design (ISSD) class. There, instead of focusing on technical development of the application, the rest of my five-person group and I stepped back and analyzed the application's stakeholders, requirements, and use cases for the Geek Corps application.</p>
+<p>Through stakeholder and user interviews, analysis of Code for America artifacts including Twitter follower data, and research into related technologies and services, we discovered several key findings that had not been present in the Geek Corps iteration of the project.</p>
+<img src="/prerendered/brigade-people.png" width="400" />
+<p>First, our research suggested that the focus of the application ought to be on all sorts of volunteers, not just (or even especially) volunteer coders. Second, rather than being a sterile coordinating tool for volunteer labor, the application needed to nurture the development of local civic technology communities by enabling not just the deployment of existing apps but events, brainstorms, and hackathons for creating apps for local needs. Finally, we found that the main assets Code for America could provide were not task-focused project management resources but rather a brand name with momentum and credibility and experience and advice in collaborating meaningfully with government for local groups that ask for it.</p>
+<p>Based on these findings, we developed a list of requirements and a static prototype for the service, now called "Code for America Everywhere."</p>
+<img src="/prerendered/brigade-data-lib.png" alt="Data Liberator" title="Data Liberator" class="left" width="100"/>
+<img src="/prerendered/brigade-userempath.png" alt="User Empath" title="User Empath" class="left" width="100"/>
+<img src="/prerendered/brigade-uxmaster.png" alt="UX Master" title="UX Master" class="left" width="100"/>
+<img src="/prerendered/brigade-sourcegods.png" alt="Source God" title="Source God" class="left" width="100"/>
+<img src="/prerendered/brigade-commevangelist.png" alt="Community Evangelist" title="Community Evangelist" class="left" width="100"/>
+<div class="clearer"></div>
+<p>As part of this, I designed a custom set of icons for the five roles or tasks associated with getting an app up and running: data, research, design, code, and deployment.</p>
+<p>At the end of the semester, we compiled our research into a <a href="/prerendered/brigade-FinalReport.pdf">final presentation and report</a> for classmates, friends of the I School, and Code for America staff members.</p>
+<h3>2012: CfA Brigade</h3>
+<img src="/prerendered/brigadelogo.png" />
+<p>A week after my group's final ISSD presentation, Code for America received a <a href="http://codeforamerica.org/2011/12/14/2012-whats-ahead/">$1.5 million Google grant</a> for continued work on CfA Everywhere, renamed "Code for America Brigade" for the final time.</p>
+<p>Based on my group's recommendations and designs, group member Kari McGlynn and Code for America staff members built a new volunteer-coordinating application over a few short months. <a href="http://brigade.codeforamerica.org">CfA Brigade</a> was launched at Code for America founder and CEO Jennifer Pahlka's keynote address at SXSW in March.</p>
+</div>
+    
+<div id="iolab" class="story">
+<h2>IOLab: learning</h2>
+    <p>In fall 2010, I took Information Organization Lab (IOLab), a web programming class where students build five simple web applications to illustrate themes in 202: Information Organization and Retrieval (one of the ISchool core courses).</p>
+
+    <img src="/prerendered/iolab-craigslistplusplus.png" class="left"/><h3>craigslist++</h3>
+    <p><a href="http://www.littlegreenriver.com/code/craigslist++/">Craigslist++</a> was a basic JavaScript/JQuery web application that attempted to ameliorate the vocabulary problem when searching for furniture on Craigslist (e.g. so when you search for "sofa", you would also get results that only include the word "couch"). It used JavaScript/JQuery, <a href="http://words.bighugelabs.com/">Big Huge Thesaurus</a> (along with a custom dictionary), and Google’s Feed Control.</p>
+    
+    <img src="/prerendered/iolab-genreroyale.png" class="left"/><h3>GenreRoyale</h3>
+    <p><a href="http://www.littlegreenriver.com/code/genreroyale/">Genre Royale</a> mashed up tag data from <a href="http://last.fm/">last.fm</a>'s API (since broken) to determine the top artists for a given genre and visualize data about them (e.g. where the artist is touring next). It also took advantage of visualizations from <a href="http://raphaeljs.com/">Raphaël</a> and Google Maps.</p>
+    
+    <img src="/prerendered/iolab-djikstronomy.png" class="left"/><h3>Djikstronomy</h3>
+    <p>An exercise in implementing tf-idf search, <a href="http://dijkstronomy.appspot.com/">Dijkstronomy</a> was also an experiment in going beyond the traditional "bag of words" document model to a "string of beads" model that natively understood term distance and multi-word searches using Python and Google App Engine.</p>
+    <img src="/prerendered/iolab-dijkstronomy-necklace.png" class="left" width="250"/>
+    <p>The Dijkstronomy distance scorer code (nearly entirely my work) <a href="http://www.littlegreenriver.com/code/dijkstronomy/distance_scorer.py">lives here</a>. This code would represent each document as a string of "beads", giving each "bead" a distance score (stopwords and hyphenated phrases have a shorter distance, terms separated by punctuation have a longer distance). A Term class would keep track of the addresses where that (stemmed) term appeared in each of the documents in the corpus. Given a two-term search, then, the code would search forward and backward in the document up to seven steps to determine what the average distance between the terms was for each document, then calculate the raw distance into an adjusted distance score. This score would then be integrated into the traditional tf-idf formula.</p>
+    
+<h2>IOLab: teaching</h2>
+    <img src="/prerendered/iolab-lolcat.png" class="left"/><p>A year later, when IOLab was offered again, I served as the class's teaching assistant. I led lab sessions every week, answered students' questions, wrote an <a href="/prerendered/iolab-cheatsheet.pdf">HTML/CSS/JS cheat sheet</a>, helped debug problems, and graded their homework.</p>
+    <p>I also gave a few lectures and tutorials with live code demos: one on beginning JavaScript and JQuery, one on <a href="/prerendered/iolab-css-slides.pdf">CSS3</a> and <a href="/prerendered/iolab-css-sample-site/index.html">basic</a> <a href="/prerendered/iolab-css-sample-site/index-2.html">design</a>, and a <a href="http://openhatch.org/wiki/Django_for_ISchoolers">self-written two-part Django tutorial</a> open to the whole ISchool.</p>
+    <p>All IOLab projects are group projects, with groups of 2-4 students. Our rule was that students should avoid working with anyone that they worked with for a previous assignment. The students were able to keep to this principle for the first three projects by their own devices, but by project 4 it was getting difficult for students to group up uniquely. Thus, just for fun I wrote <a href="https://github.com/aldeka/Grouper">a grouping script in Python</a> and used it to assign groups for project 4. (By the project 5 it was hopeless, so students could work with whomever they wanted.)</p>
+</div>
+    
+<div id="gsd" class="story">
+<h2>Getting Sh*t Done</h2>
+    <p>In January 2012, Google Tasks randomly lost all of my todo items with assigned due-dates. (Which, practically speaking, was nearly all of them.) In a fit of pique, I responded by designing, building, and deploying my own hand-rolled todos application, lovingly named <a href="https://github.com/aldeka/gsd">Getting Sh*t Done</a> after <a href="http://www.davidco.com/about-gtd">the book/cult of (almost) the same name</a>, in about two weeks using JQuery UI, Python, and Django.</p>
+    <img src="/prerendered/gsd.png" class="center" width="650"/>
+    <p>GSD is extremely simple, too simple at this point to be anything more than a dirty hack or demoware, but it works. It was the first time I built a Django app entirely soup-to-nuts, including deployment.</p>
+</div>
+
+<a href="#portfolio" class="right">Back to top</a><div class="clearer"></div>
+</div>
+
+Here's <a href="/cv.pdf">my resume</a>. Or, if you prefer, my <a href="http://www.linkedin.com/in/krustad">LinkedIn</a> and <a href="https://github.com/aldeka/">my Github profile</a>.
+{% endblock %}

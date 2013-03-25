@@ -1,0 +1,4 @@
+*.pyc
+*~
+*.pyo
+rendered_website/*
