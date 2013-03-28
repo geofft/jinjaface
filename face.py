@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-from jinja2 import Environment, BaseLoader
+from jinja2 import Environment, BaseLoader, TemplateNotFound
 import os
+import sys
 import codecs
+
 
 class MyLoader(BaseLoader):
     def __init__(self, path):
@@ -16,24 +18,35 @@ class MyLoader(BaseLoader):
             source = f.read().decode('utf-8')
         return source, path, lambda: mtime == os.path.getmtime(path)
 
-def render_stuff(template_path=None, output_path=None):
+
+def render_all(template_path=None, output_path=None):
     if not template_path:
         template_path = os.getcwd() + '/templates'
     if not output_path:
         output_path = os.getcwd() + '/rendered_website'
-    env = Environment(loader=MyLoader('templates'))
+    env = Environment(loader=MyLoader(template_path))
+    # find all the files inside all the subdirectories of the template path
     all_the_things = os.walk(template_path)
     for root, dirs, files in all_the_things:
         for f in files:
+            # check that it's a template file
             if f[-5:] == '.html' and f[:1] != '_':
                 full_path = root + '/' + f
+                # path relative to template_path
                 relative_path = full_path[len(template_path) + 1:]
                 print "Rendering " + relative_path
+                # render the template
                 template = env.get_template(relative_path)
-                print template
+                # calculate directory output should go in
                 dirname = os.path.dirname(output_path + '/' + relative_path)
+                # and if it doesn't exist yet, create it
                 if not os.path.exists(dirname):
                     os.makedirs(dirname)
+                # make rendered html file
                 with codecs.open(output_path + '/' + relative_path, 'w', 'utf-8') as render_file:
                     for line in template.render():
                         render_file.write(line)
+
+
+if __name__ == "__main__":
+    render_all(*sys.argv[1:])
