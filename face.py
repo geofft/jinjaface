@@ -3,6 +3,7 @@ from jinja2 import Environment, BaseLoader, TemplateNotFound
 import os
 import sys
 import codecs
+import markdown
 
 
 class MyLoader(BaseLoader):
@@ -25,6 +26,7 @@ def render_all(template_path=None, output_path=None):
     if not output_path:
         output_path = os.getcwd() + '/rendered_website'
     env = Environment(loader=MyLoader(template_path))
+    env.filters['markdown'] = markdown.markdown
     # find all the files inside all the subdirectories of the template path
     all_the_things = os.walk(template_path)
     for root, dirs, files in all_the_things:
